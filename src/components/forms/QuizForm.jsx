@@ -42,6 +42,7 @@ const QuizForm = ({ type, quizId }) => {
         modified: new Date().toLocaleString(),
       };
       dispatch(updateQuizes({ quiz: updatedQuiz }));
+      console.log(JSON.stringify(updatedQuiz));
     } else {
       let newQuiz = {};
       newQuiz = {
@@ -70,6 +71,7 @@ const QuizForm = ({ type, quizId }) => {
         url: values.url,
       };
       dispatch(addNewQuiz({ quiz: newQuiz }));
+      console.log(JSON.stringify(newQuiz));
     }
   };
 
